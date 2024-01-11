@@ -1,0 +1,48 @@
+.title_box{
+    box-sizing: border-box;
+    width:100%;
+    height: 23vh;
+    margin-top: 16.25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#logo{
+    box-sizing: border-box;
+    width: 69.44vw;
+    height: 15vh;
+    background-color: #BDBDBD;
+}
+#title{
+    margin-top: 2.375vh; 
+    font-size: var(--title-font-size);
+    font-weight: var(--title-font-weight);
+}
+#subtitle{
+    margin-top: 1.375vh;
+    font-size: var(--subtitle-font-size);
+    font-weight: var(--subtitle-font-weight);
+}
+.btn_box{
+    position: absolute;
+    box-sizing: border-box;
+    width: 91.11vw;
+    top: 77.66vh; 
+    display: flex;
+    flex-direction: column;
+    gap: 1.03vh;
+}
+.btn{
+    box-sizing: border-box;
+    width: 100%;
+    height: 6.23vh;
+    font-size: var(--subtitle-font-size);
+    font-weight: var(--subtitle-font-weight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    font-weight: bold;
+}
+
