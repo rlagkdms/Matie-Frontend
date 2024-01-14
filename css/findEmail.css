@@ -1,0 +1,24 @@
+.input_box{
+    box-sizing: border-box;
+    width:91.11vw;
+    position: relative;
+    top: 15.58vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+span{
+    margin-left: 8px;
+}
+input{
+    box-sizing: border-box;
+    width: 91.11vw;
+    height: 7vh;
+    border-radius: 8px;
+    border:2px solid #616161;
+    padding: 18px 20px; 
+    outline: none;
+}
+input:focus{
+   border-color: black;
+}
