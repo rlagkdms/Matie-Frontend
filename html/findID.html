@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/findEmail.css">
+    <link rel="stylesheet" href="../css/findID.css">
 </head>
 <body>
     <main>
@@ -17,20 +17,23 @@
         <h1>Confirm that it’s you</h1>
         <div class="input_box">
             <div class="input_div">
-                <span>Nickname</span>
-                <input type="text" class="input" placeholder="Nickname" onfocus="placeholder=''" onblur="placeholder='Nickname'">
+                <span>Email</span>
+                 <div class="input_custom">
+                     <input type="text" class="input" placeholder="Email address" onfocus="placeholder=''" onblur="placeholder='Email address'">
+                     <button>Send code</button>
+                </div>
             </div>
             <div class="input_div">
-                <span>Password</span>
-                <input type="password" class="input" placeholder="Password" onfocus="placeholder=''" onblur="placeholder='Password'"  >
-            </div>
-            <div class="input_div">
-                <span>reCAPTCHA</span>
+                <span>Code</span>
+                <div class="input_custom">
+                    <input type="password" class="input" placeholder="The code has sent to your email" onfocus="placeholder=''" onblur="placeholder='The code has sent to your email'">
+                    <span id="timer">00:00</span>
+                </div>
             </div>
         </div>
         <div class="btn_box">
-            <div class="btn findemail" onclick="location.href = '../html/findEmailResult.html'" >Comfirm</div>
-            <div class="btn forgot" onclick="location.href = '../html/RequestForHelp.html'">I don't know my nickname/password</div>
+            <div class="btn default_btn" onclick="location.href = '../html/findIDResult.html'" >Comfirm</div>
+            <div class="btn cancel_btn" onclick="location.href = '../html/RequestForHelp.html'">Cancel</div>
         </div>
     </main>
 </body>

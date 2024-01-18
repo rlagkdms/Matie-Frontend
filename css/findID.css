@@ -2,28 +2,24 @@
     box-sizing: border-box;
     width:91.11vw;
     position: relative;
-    top: 11.42vh;
+    top: 15.58vh;
     display: flex;
     flex-direction: column;
     row-gap: 16px;
 }
 span{
     margin-left: 8px;
-    margin-bottom: 4px;
 }
 .input_custom{
     box-sizing: border-box;
     width: 91.11vw;
     height: 7vh;
     border-radius: 8px;
-    border:2px solid #616161;
+    border:1px solid #E0E0E0;
     position: relative;
     display: flex;
     align-items: center;
-}
-/* TODO:focus 되었을 때 border파란색으로*/
-input:focus{
-   border-color: blue;
+    color: #E0E0E0;
 }
 input{
     box-sizing: border-box;
@@ -34,6 +30,7 @@ input{
     padding: 21px 0 21px 20px; 
     background-color: transparent;
     border:none;
+    color: #E0E0E0;
 }
 input+span{
     box-sizing: border-box;
@@ -48,6 +45,7 @@ button{
     right: 0;
     margin-right: 20px;
     background-color: transparent;
+    color: #E0E0E0;
 }
 #find_id_pw{
     box-sizing: border-box;
@@ -56,5 +54,9 @@ button{
     font-size: 12px;
 }
 #timer{
-    color: #7B4DFF;
+    /* color: #7B4DFF; */
+    color: #E0E0E0;
 }
+input:focus{
+    border-color: blue;
+ }
