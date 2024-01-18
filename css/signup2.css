@@ -14,7 +14,7 @@ h1{
     font-weight: var(--title-font-weight);
 }
 span{
-    margin-left: 8px; 
+    margin-left: 8px;
 }
 input{
     box-sizing: border-box;
@@ -37,20 +37,4 @@ input{
 }
 input:focus{
    border-color: #2291F8;
-}
-.input_custom>input{
-    height: 6.5vh;
-    border: none; 
-    outline: none;
-    background-color: transparent;
-} 
-input+span{
-    box-sizing: border-box;
-    position: absolute;
-    right: 0;
-    margin: 0;
-    margin-right: 20px;
-}
-#eye{
-    background-image: url(../img/close_eye.svg);
 }

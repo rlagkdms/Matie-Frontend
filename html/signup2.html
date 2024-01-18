@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matie</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/signup2.css">
 </head>
 <body>
     <main>
-        <h1>Log in</h1>
+        <h1>Sign up</h1> 
         <div class="input_box">
             <div class="input_div">
                 <span>Email</span>
-                <input type="text" class="input" placeholder="Email address" onfocus="placeholder=''" onblur="placeholder='Email address'">
+                <input type="text" class="input" placeholder="Email" onfocus="placeholder=''" onblur="placeholder='Email'"  >
             </div>
             <div class="input_div">
-                <span>Password</span>
-                <input type="password" class="input" placeholder="Password" onfocus="placeholder=''" onblur="placeholder='Password'">
-                <span id="find_id_pw" onclick="location.href='../html/findIdPw.html'">Forgot Email/Password?</span>
+                <span>Nickname</span>
+                <input type="text"  class="3~8 letters" placeholder="3~8 letters" onfocus="placeholder=''" onblur="placeholder='3~8 letters'" >
             </div>
         </div>
         <div class="btn_box">
-            <div class="btn default_btn" onclick="location.href = '../html/home.html'" >Confirm</div>
+            <div class="btn default_btn" onclick="location.href = '../html/login.html'" >Confirm</div>
             <div class="btn cancel_btn" onclick="location.href = '../html/first.html'">Cancel</div>
         </div>
     </main>
     
 </body>
+    <script src="../js/signup.js"></script>
 </html>
