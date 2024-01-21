@@ -4,9 +4,6 @@ let isToastShown = false;
 function login() {
   if (isToastShown) return;
 
-  isToastShown = true;
-  toast.classList.add("show");
-
   const id = document.getElementById("id").value;
   const pw = document.getElementById("pw").value;
 
@@ -23,11 +20,12 @@ function login() {
       location.href = "../html/home.html";
     })
     .catch((error) => {
+      isToastShown = true;
+      toast.classList.add("show");
       toast.innerHTML = error.response.data;
+      setTimeout(() => {
+        toast.classList.remove("show");
+        isToastShown = false;
+      }, 2700);
     });
-
-  setTimeout(() => {
-    toast.classList.remove("show");
-    isToastShown = false;
-  }, 2700);
 }
