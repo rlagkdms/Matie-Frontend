@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,35 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body>
     <main>
         <h1>Log in</h1>
         <div class="input_box">
             <div class="input_div">
                 <span>Email</span>
-                <input type="text" class="input" placeholder="Email address" onfocus="placeholder=''" onblur="placeholder='Email address'">
+                <input type="text" class="input" id="id" placeholder="Email address" onfocus="placeholder=''"
+                    onblur="placeholder='Email address'">
             </div>
             <div class="input_div">
                 <span>Password</span>
-                <input type="password" class="input" placeholder="Password" onfocus="placeholder=''" onblur="placeholder='Password'">
+                <input type="password" class="input" id="pw" placeholder="Password" onfocus="placeholder=''"
+                    onblur="placeholder='Password'">
                 <span id="find_id_pw" onclick="location.href='../html/findIdPw.html'">Forgot Email/Password?</span>
             </div>
         </div>
         <div class="btn_box">
-            <div class="btn default_btn" onclick="location.href = '../html/home.html'" >Confirm</div>
+            <div class="btn default_btn" onclick="login()">Confirm</div>
             <div class="btn cancel_btn" onclick="location.href = '../html/first.html'">Cancel</div>
         </div>
+
+        <div id="toast">Toast Message</div>
     </main>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/login.js"></script>
 </body>
+
 </html>
