@@ -13,7 +13,7 @@ function login() {
   };
 
   axios
-    .post(`${BASE_URL}/login`, req)
+    .post(`${SERVER_URL}/login`, req)
     .then((res) => {
       console.log(res);
       Cookies.set("user_id", res.data.id, { expires: 1 });

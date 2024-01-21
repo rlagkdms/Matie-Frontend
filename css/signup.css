@@ -54,9 +54,3 @@ input + span {
 #eye {
   background-image: url(../img/close_eye.svg);
 }
-
-.input_error {
-  margin-top: 1vh;
-  margin-left: 5vw;
-  color: red;
-}

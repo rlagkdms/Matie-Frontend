@@ -7,6 +7,8 @@ const error1 = document.getElementsByClassName("input_error")[0];
 const error2 = document.getElementsByClassName("input_error")[1];
 const error3 = document.getElementsByClassName("input_error")[2];
 
+var isSuccess = false;
+
 //패스워드 보이게 설정하기
 eyeBtn.onclick = () => {
   check = !check;
@@ -22,11 +24,6 @@ pwInput.onfocus = () => {
 pwInput.onblur = () => {
   customInputDiv.style.borderColor = "#616161";
 };
-
-function error(obj) {
-  obj.focus();
-  obj.style.borderColor = "#E9584A";
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("id").value = sessionStorage.getItem("id");
@@ -55,6 +52,11 @@ function signup() {
   pw.style.borderColor = "#2291F8";
   pwCheck.style.borderColor = "#2291F8";
 
+  axios
+    .get(`http://localhost:8080/users/duplicate2/${id.value}`)
+    .then(() => (isSuccess = true))
+    .catch(() => (error1.innerHTML = "ID already exists, use another ID"));
+
   const idRegex = /^[a-zA-Z][0-9a-zA-Z]{6,12}$/;
 
   error1.innerHTML = !idRegex.test(id.value)
@@ -82,14 +84,10 @@ function signup() {
     return;
   }
 
+  if (!isSuccess) return;
+
   sessionStorage.setItem("id", id.value);
   sessionStorage.setItem("pw", pw.value);
 
   location.href = "../html/signup2.html";
-}
-
-function cancel() {
-  sessionStorage.removeItem("id");
-  sessionStorage.removeItem("pw");
-  location.href = "../html/first.html";
 }
