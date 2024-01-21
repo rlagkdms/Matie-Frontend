@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,42 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/signup.css">
 </head>
+
 <body>
     <main>
-        <h1>Sign up</h1> 
+        <h1>Sign up</h1>
         <div class="input_box">
             <div class="input_div">
                 <span>ID</span>
-                <input type="text" class="input" placeholder="ID" onfocus="placeholder=''" onblur="placeholder='ID'"  >
+                <input type="text" class="input" id="id" placeholder="ID" onfocus="placeholder=''"
+                    onblur="placeholder='ID'">
+                <div class="input_error"></div>
             </div>
             <div class="input_div">
                 <span>Password</span>
-                <input type="password"  class="input" placeholder="Password" onfocus="placeholder=''" onblur="placeholder='Password'" >
+                <input type="password" class="input" id="pw" placeholder="Password" onfocus="placeholder=''"
+                    onblur="placeholder='Password'">
+                <div class="input_error"></div>
             </div>
             <div class="input_div">
                 <span>Confirm</span>
                 <div class="input_custom">
-                    <input type="password" class="input" placeholder="Password Confirm" onfocus="placeholder=''" onblur="placeholder='Password Confirm'">
-                    <span  class="eye_close">
+                    <input type="password" class="input" id="pw-check" placeholder="Password Confirm"
+                        onfocus="placeholder=''" onblur="placeholder='Password Confirm'">
+                    <span class="eye_close">
                         <img src="../img/close_eye.svg" alt="">
-                    </span>          
+                    </span>
                 </div>
+                <div class="input_error"></div>
             </div>
         </div>
         <div class="btn_box">
-            <div class="btn default_btn" onclick="location.href = '../html/signup2.html'" >Confirm</div>
-            <div class="btn cancel_btn" onclick="location.href = '../html/first.html'">Cancel</div>
+            <div class="btn default_btn" onclick="signup()">Confirm</div>
+            <div class="btn cancel_btn" onclick="cancel()">Cancel</div>
         </div>
     </main>
-    
+
 </body>
-    <script src="../js/signup.js"></script>
+<script src="../js/signup.js"></script>
+
 </html>
