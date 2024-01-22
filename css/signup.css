@@ -15,11 +15,11 @@ main{
     flex-direction: column;
     row-gap: 16px;
 }
-h1{
-    position: relative;
-    top: 7.79vh;
-    font-size: var(--title-font-size);
-    font-weight: var(--title-font-weight);
+h1 {
+  position: relative;
+  top: 7.79vh;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
 }
 span{
     margin-left: 8px; 
@@ -45,8 +45,8 @@ input{
     display: flex;
     align-items: center;
 }
-input:focus{
-   border-color: #2291F8;
+input:focus {
+  border-color: #2291f8;
 }
 .input_custom>input{
     height: 6.5vh;
@@ -61,6 +61,20 @@ input+span{
     margin: 0;
     margin-right: 20px; 
 }
-#eye{
-    background-image: url(../img/close_eye.svg);
+.input_custom > input {
+  height: 6.5vh;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+}
+input + span {
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  margin: 0;
+  margin-right: 20px;
+}
+#eye {
+  background-image: url(../img/close_eye.svg);
 }
