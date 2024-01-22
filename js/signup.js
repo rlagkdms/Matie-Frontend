@@ -91,3 +91,11 @@ function signup() {
 
   location.href = "../html/signup2.html";
 }
+<<<<<<< HEAD
+
+pwInput.onfocus = ()=>{customInputDiv.style.borderColor = '#2291F8';}
+pwInput.onblur = () => {customInputDiv.style.borderColor = '#616161';}
+
+    
+=======
+>>>>>>> e724967a7da06b692d4fdf982d09ebcf723a3b26
