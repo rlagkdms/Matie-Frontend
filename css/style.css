@@ -35,14 +35,6 @@ html,body{
     width: 100%;
     height: 100%;
 }
-main{
-    /* width: 100%; */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: var(--body-font-weight);
-}
 .tabbar{
     box-sizing: border-box;
     width: 100%;
