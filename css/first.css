@@ -16,20 +16,11 @@ main{
     align-items: center;
     justify-content: center;
 }
-#logo{
-    box-sizing: border-box;
-    width: 69.44vw;
-    height: 15vh;
-    background-color: #BDBDBD;
-}
-#title{
-    margin-top: 2.375vh; 
-    font-size: var(--title-font-size);
-    font-weight: var(--title-font-weight);
-}
-#subtitle{
+#sub_title{
+    display: block;
     margin-top: 1.375vh;
     font-size: var(--subtitle-font-size);
     font-weight: var(--subtitle-font-weight);
+    color: #616161;
 }
 
