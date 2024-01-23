@@ -19,18 +19,21 @@ span{
     margin-left: 8px;
     color: #616161;
 }
-input{
+.input{
     box-sizing: border-box;
     width: 91.11vw;
     height: 7vh;
     border-radius: 8px;
-    border:1px solid #616161;
+    border:1px solid #E0E0E0;
     padding: 18px 20px; 
     outline: none;
-    color: #9E9E9E;
+    margin-top:4px;
 }
 input:focus {
   border-color: #2291f8;
+}
+input::placeholder{
+  color: #9E9E9E;
 }
 #find_id_pw {
   margin-top: 8px;

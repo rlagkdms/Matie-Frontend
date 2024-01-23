@@ -25,21 +25,20 @@ span{
     margin-left: 8px;
     color : #616161;
 }
-input{
+.input{
     box-sizing: border-box;
     width: 91.11vw;
     height: 7vh;
     border-radius: 8px;
-    border:1px solid #9E9E9E;
+    border:1px solid #E0E0E0;
     padding: 18px 20px; 
     outline: none;
+    margin-top: 4px;
+}
+input::placeholder{
+    color: #9E9E9E;
 }
 .input_custom{
-    box-sizing: border-box;
-    width: 91.11vw;
-    height: 7vh;
-    border-radius: 8px;
-    border:2px solid #616161;
     position: relative;
     display: flex;
     align-items: center;

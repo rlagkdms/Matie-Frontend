@@ -22,7 +22,7 @@ pwInput.onfocus = () => {
   customInputDiv.style.borderColor = "#2291F8";
 };
 pwInput.onblur = () => {
-  customInputDiv.style.borderColor = "#616161";
+  customInputDiv.style.borderColor = "#E0E0E0";
 };
 
 document.addEventListener("DOMContentLoaded", () => {
