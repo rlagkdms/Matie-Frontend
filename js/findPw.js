@@ -1,10 +1,18 @@
 const sendBtn = document.getElementById("send");
 const codeInput = document.getElementsByClassName("input_div")[1];
+const emailInput = document.getElementById("input_email");
+
+emailInput.oninput = ()=>{ 
+  if(emailInput.value === '')sendBtn.disabled = true; 
+  else  sendBtn.disabled = false;  
+} //비활성화
+
 sendBtn.onclick = () => {
+  emailInput.disabled = true;
   sendBtn.innerText = "Sent";
   sendBtn.style.color = "#7B4DFF";
   codeInput.style.display = "block";
-  setTimer();
+  resetCount();
   sendEmail();
 };
 let customInputDiv = document.getElementsByClassName("input_custom");
@@ -17,31 +25,42 @@ input.forEach((element) => {
 
 const timer = document.getElementById("timer");
 timer.onclick = () => {
-  setTimer();
+  resetCount();
   sendEmail();
 };
+let min; 
+let sec; 
+let TIME;
 
-function setTimer() {
-  let time = 180000;
-  let min = 3;
-  let sec = 60;
+function resetCount() {
+  min = 2; 
+  sec = 60; 
+  TIME = setInterval((e) => {
   timer.innerText = `${min}:00`;
-  PLAYTIME = setInterval(function () {
-    time -= 1000; //1초씩 감소
-    min = time / (60 * 1000); //초를 분으로 나누기
-    if (time > 0) {
-      sec -= 1;
-      if (sec === 0) {
-        sec = 60;
-      }
-      timer.innerText = `${Math.floor(min)}:${sec}`;
-    }
-    if (time === 0) {
-      // sec=60;
-      // timer.innerText = Math.floor(min)+':'+'00'
-      timer.innerText = "resend";
-    }
+    setTimer();
   }, 1000);
+}
+
+function setTimer(){
+  const numMin  = Number(min);
+  const numSec = Number(sec);
+  if(numMin === 0 && numSec === 0){
+    timer.innerText = "resend";
+    clearInterval(TIME);
+  }
+  else{
+    if(numSec === 0){
+      const newMin = numMin -1; 
+      const newSec = 59;
+  
+      min = newMin.toString(); 
+      sec = newSec.toString(); 
+    }else{
+      const newSec = numSec -1; 
+      sec = (newSec < 10)?`0${newSec.toString()}`: newSec.toString();
+    }
+    timer.innerText = `${min}:${sec}`;
+  }
 }
 
 function sendEmail() {
@@ -65,8 +84,3 @@ function changePassword() {
     })
     .catch((err) => {});
 }
-
-//3분이 되면 타이머 삭제하기
-setTimeout(function () {
-  clearInterval(PLAYTIME);
-}, 180000);
