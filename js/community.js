@@ -10,7 +10,7 @@ async function question() {
     .then((result) => {
       for (var data of result.data) {
         const temp = document.createElement("div");
-        temp.innerHTML = `<div class="container-component">
+        temp.innerHTML = `<div class="container-component" onclick="detailQna(${data.id})">
             <div class="component-user">
                 <button class="user-image"></button>
                 <p>
@@ -50,7 +50,7 @@ async function debate() {
     .then((result) => {
       for (var data of result.data) {
         const temp = document.createElement("div");
-        temp.innerHTML = `<div class="container-component">
+        temp.innerHTML = `<div class="container-component" onclick="detailDebate(${data.id})">
           <div class="component-user">
               <button class="user-image"></button>
               <p>
@@ -83,4 +83,12 @@ async function debate() {
       }
     })
     .catch((err) => {});
+}
+
+function detailQna(value) {
+  location.href = `../html/community-qna.html?id=${value}`;
+}
+
+function detailDebate(value) {
+  location.href = `../html/community-debate.html?id=${value}`;
 }
