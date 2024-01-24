@@ -1,10 +1,131 @@
-menu{
-    display: flex;
-    width:100%;
-    height:6vh;
-    justify-content: space-around;
-    align-items: center;
-    position:fixed;
-    bottom:0;
-    box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.08);
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  position: relative;
+  height: 82.73vh;
+  background-color: var(--background-color);
+  overflow-y: scroll;
+  padding-left: 5px;
+  padding-top: 20px;
+  top: 7.27vh;
+}
+
+.container-user {
+  display: inline-flex;
+  width: 97%;
+  background-color: white;
+  padding: 20px;
+}
+
+.user-image {
+  width: 14vmin;
+  height: 14vmin;
+  border-radius: 50%;
+  border: 0;
+  background-color: #757575;
+}
+
+.container-text {
+  padding: 2vmin;
+  padding-left: 3vmin;
+}
+
+.name {
+  font-size: 4vmin;
+}
+
+.create-date {
+  font-size: 3vmin;
+  color: #616161;
+}
+
+.container-edit {
+  position: fixed;
+  right: 8vmin;
+  margin-top: 3vmin;
+}
+
+.container-point {
+  margin-top: 2vmin;
+  padding-top: 3vmin;
+  background-color: white;
+}
+
+.point {
+  display: inline-flex;
+  padding-left: 5vmin;
+}
+
+.point-number {
+  padding-top: 2vmin;
+  font-size: 6vmin;
+  font-weight: bold;
+}
+
+.point-desc {
+  padding-top: 4vmin;
+  padding-left: 2vmin;
+  color: #616161;
+}
+
+.go-to-shop {
+  position: fixed;
+  right: 3vmin;
+  padding-top: 1vmin;
+}
+
+.container-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4vmin;
+  padding-bottom: 2vmin;
+}
+
+.container-setting {
+  margin-top: 2vmin;
+  padding-top: 3vmin;
+  background-color: white;
+  line-height: 12vmin;
+  padding-left: 5vmin;
+}
+
+.title {
+  color: #9e9e9e;
+}
+
+.setting-text {
+  font-size: 4.5vmin;
+  padding-left: 5vmin;
+}
+
+.component {
+  display: flex;
+}
+
+.container-logout {
+  margin-top: 2vmin;
+  padding-top: 3vmin;
+  padding-bottom: 1vmin;
+  background-color: white;
+  padding-left: 5vmin;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+menu {
+  display: flex;
+  width: 100%;
+  height: 6vh;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.08);
 }

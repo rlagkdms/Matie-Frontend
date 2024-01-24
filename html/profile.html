@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,114 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/profile.css">
 </head>
+
 <body>
     <div id="wrap">
         <div class="tabbar">
             <span>Profile</span>
         </div>
-        <main> 
+        <main>
+            <div class="container-user">
+                <button class="user-image"></button>
+                <div class="container-text">
+                    <span class="name" id="name">Maties</span><br>
+                    <span class="create-date" id="date">Been our mate from Jan 10th 2024</span>
+                </div>
+                <div class="container-edit">
+                    <button type="button">
+                        <img src="../img/edit.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="container-point">
+                <div class="point">
+                    <span class="point-number" id="point">24800</span>
+                    <span class="point-desc">points</span>
+                    <div class="go-to-shop">
+                        <button type="button" onclick="location.href = '../html/shop.html'">
+                            <img src=" ../img/go-to-shop.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="container-button">
+                    <div class="container-favorite">
+                        <button type="button" onclick="location.href = '../html/shop-favorite.html'">
+                            <img src="../img/favorite.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="container-cart">
+                        <button type="button" onclick="location.href = '../html/cart.html'">
+                            <img src="../img/cart.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="container-order">
+                        <button type="button" onclick="location.href='../html/profile-orders.html'">
+                            <img src="../img/order.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-setting">
+                <span class="title">Settings</span>
+
+                <div class="container-component">
+                    <div class="component">
+                        <button type="button">
+                            <img src="../img/ph_bell-fill.svg" alt="">
+                        </button>
+                        <span class="setting-text">Notification</span>
+                    </div>
+
+                    <div class="component">
+                        <button type="button">
+                            <img src="../img/ph_globe.svg" alt="">
+                        </button>
+                        <span class="setting-text">Language</span>
+                    </div>
+
+                    <div class="component" onclick="location.href='profile-security.html'">
+                        <button type=" button">
+                            <img src="../img/material-symbols_lock.svg" alt="">
+                        </button>
+                        <span class="setting-text">Security</span>
+                    </div>
+
+                    <div class="component">
+                        <button type="button">
+                            <img src="../img/ion_body.svg" alt="">
+                        </button>
+                        <span class="setting-text">Accessibility</span>
+                    </div>
+
+                    <div class="component">
+                        <button type="button">
+                            <img src="../img/mi_circle-help.svg" alt="">
+                        </button>
+                        <span class="setting-text">Help</span>
+                    </div>
+
+                    <div class="component">
+                        <button type="button">
+                            <img src="../img/gg_info.svg" alt="">
+                        </button>
+                        <span class="setting-text">About us</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-logout" onclick="logout()">
+                <div class="component">
+                    <button type="button">
+                        <img src="../img/logout.svg" alt="">
+                    </button>
+                    <span class="setting-text">Log out</span>
+                </div>
+            </div>
         </main>
         <menu>
             <div class="context" onclick="location.href='../html/home.html'">
@@ -29,6 +132,11 @@
             </div>
         </menu>
     </div>
-    
+
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/profile.js"></script>
+
 </html>

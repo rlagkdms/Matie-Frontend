@@ -1,15 +1,27 @@
-.container-title {
-  margin-top: 12vmin;
-  margin-left: 5vmin;
+#wrap {
+  width: 100%;
+  height: 100%;
 }
 
-.title {
-  font-size: 5vmin;
-  font-weight: bold;
+main {
+  position: relative;
+  height: 82.73vh;
+  background-color: var(--background-color);
+  overflow-y: scroll;
+  padding-left: 5px;
+  padding-top: 20px;
+  top: 7.27vh;
+}
+
+.container-select {
+  width: 100%;
+  position: fixed;
+  top: 20vmin;
+  z-index: 10;
+  background-color: white;
 }
 
 .select {
-  padding-top: 11vmin;
   text-align: center;
 }
 
@@ -23,7 +35,6 @@
   height: 9vmin;
   font-weight: bold;
   font-size: 4.3vmin;
-  margin-right: 1%;
 }
 
 .select input[type="radio"]:checked + label {
@@ -48,13 +59,12 @@ span {
 }
 
 .container-community {
-  background-color: gray;
-  margin-top: 4vmin;
+  margin-top: 10vmin;
 }
 
 .container-component {
   background-color: white;
-  margin-top: 2vmin;
+  padding-top: 4vmin;
   padding-left: 5vmin;
   margin-bottom: 1vmin;
 }
@@ -72,12 +82,20 @@ span {
   margin-right: 2.5vmin;
 }
 
+.name {
+  color: #2c2c2c;
+  font-weight: 600;
+  font-size: 3.5vmin;
+}
+
 .date {
   color: #9e9e9e;
+  font-size: 3vmin;
+  padding-top: 0.4vmin;
 }
 
 .option {
-  margin-left: 53vmin;
+  margin-left: 55vmin;
 }
 
 .component-info {
@@ -86,20 +104,64 @@ span {
 }
 
 .title {
+  font-size: 4vmin;
+  font-weight: bold;
   margin-top: 2vmin;
   margin-bottom: 2.5vmin;
+  margin-right: 13vmin;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .content {
-  font-size: 4.2vmin;
+  display: -webkit-box;
+  font-size: 3.4vmin;
   line-height: 6vmin;
   color: #616161;
+  margin-right: 4vmin;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
-.component-bottom {
+.component-bottom-question {
+  margin-top: 6vmin;
   margin-left: 67vmin;
   margin-right: 1vmin;
   word-spacing: 8vmin;
+  padding-bottom: 3vmin;
+}
+
+.component-bottom-debate {
+  display: inline-flex;
+  margin-top: 8vmin;
+  padding-bottom: 4vmin;
+}
+
+.button-like {
+  margin-left: 13.5vmin;
+}
+
+.button-unlike {
+  margin-left: 29vmin;
+}
+
+.like {
+  display: flex;
+}
+
+.unlike {
+  display: flex;
+}
+
+label {
+  font-size: 4.7vmin;
+  margin-left: 2vmin;
 }
 
 button {
