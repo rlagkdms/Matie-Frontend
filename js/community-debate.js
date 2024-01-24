@@ -81,5 +81,4 @@ function send() {
       document.querySelector(".component-comment").append(temp);
     })
     .catch((err) => {});
-  location.reload(true);
 }
