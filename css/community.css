@@ -103,12 +103,20 @@ span {
 }
 
 .content {
+  display: -webkit-box;
   font-size: 3.4vmin;
   line-height: 6vmin;
   color: #616161;
+  margin-right: 4vmin;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .component-bottom {
+  margin-top: 6vmin;
   margin-left: 67vmin;
   margin-right: 1vmin;
   word-spacing: 8vmin;
