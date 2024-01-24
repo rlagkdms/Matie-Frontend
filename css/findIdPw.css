@@ -1,7 +1,7 @@
-main{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: var(--body-font-weight);
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: var(--body-font-weight);
 }
