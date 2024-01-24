@@ -61,9 +61,9 @@
             </div>
 
             <div class="container-write">
-                <input type="text" class="write" placeholder="Placeholder">
+                <input type="text" class="write" id="comment" placeholder="Placeholder">
                 <div class="component-send">
-                    <button class="send">
+                    <button type="button" class="send" onclick="send()">
                         <img src="../img/material-symbols_send.svg" alt="">
                     </button>
                 </div>
@@ -72,6 +72,7 @@
     </div>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="../js/community-qna.js"></script>
 
