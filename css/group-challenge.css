@@ -1,0 +1,99 @@
+#group{
+    display: flex;
+    justify-content: center;
+}
+section{
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 67.75vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    top: 7vh;
+}
+.radio_group{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 2.2vw;
+    width: 91.1vw;
+    height: 5vh;
+    margin-top: 1vh;
+}
+.radio_group>label{
+    box-sizing: border-box;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    font-size: var(--subtitle-font-size);
+    font-weight: var(--content-font-weight);
+    color:white;
+    background-color: #91C8FC;
+    border:none;
+}
+input[type=radio]{
+    display: none;
+}
+.radio_group #open+label{
+    width: 18.05vw;
+}
+.radio_group #joined+label{
+    width:20.8vw;
+}
+input[type=radio]:checked+label{
+    background-color: #001178;
+    font-weight: var(--subtitle-font-weight);
+    font-weight: 600;
+}
+.group_chall_div{
+    width: 91.1vw;
+    height:12.5vh;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+
+}
+.group_chall_img{
+    box-sizing: border-box;
+    width: 17.8vw;
+    height: 10vh;
+    background-color: #BDBDBD;
+}
+.title_box{
+    box-sizing: border-box;
+    width: 73.3vw;
+    height: 100%;
+    padding: 1.5vh 16px 1.5vh 8px;
+}
+.title_box > h4{
+    font-size: var(--body-font-size);
+}
+.exp_box{
+    box-sizing: border-box;
+    width: 66.66vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top:0.6vh;
+}
+#progress{
+    box-sizing: border-box;
+    appearance: none;
+    margin-top:5px;
+}
+#progress::-webkit-progress-bar {
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    height: 8px;
+    width: 66.66vw;
+}
+#progress::-webkit-progress-value{
+    background-color: #91C8FC;
+    border-radius: 10px;
+}
+.day{
+    display: block;
+}
