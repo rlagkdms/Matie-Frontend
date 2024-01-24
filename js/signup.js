@@ -26,17 +26,17 @@ pwInput.onblur = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("id").value = sessionStorage.getItem("id");
+  document.getElementById("email").value = sessionStorage.getItem("email");
   document.getElementById("pw").value = sessionStorage.getItem("pw");
 });
 
 function signup() {
-  const id = document.getElementById("id");
+  const email = document.getElementById("email");
   const pw = document.getElementById("pw");
   const pwCheck = document.getElementById("pw-check");
 
-  if (!id.value) {
-    error(id);
+  if (!email.value) {
+    error(email);
     return;
   }
   if (!pw.value) {
@@ -48,22 +48,27 @@ function signup() {
     return;
   }
 
-  id.style.borderColor = "#2291F8";
+  email.style.borderColor = "#2291F8";
   pw.style.borderColor = "#2291F8";
   pwCheck.style.borderColor = "#2291F8";
 
   axios
-    .get(`http://localhost:8080/users/duplicate2/${id.value}`)
+    .get(`http://localhost:8080/users/duplicate1/${email.value}`)
     .then(() => (isSuccess = true))
-    .catch(() => (error1.innerHTML = "ID already exists, use another ID"));
+    .catch(
+      () =>
+        (error1.innerHTML =
+          "Email already exists, use another email address or login")
+    );
 
-  const idRegex = /^[a-zA-Z][0-9a-zA-Z]{6,12}$/;
+  const emailRegex =
+    /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 
-  error1.innerHTML = !idRegex.test(id.value)
-    ? "6~12자 이내로 영문과 숫자만 가능합니다."
+  error1.innerHTML = !emailRegex.test(email.value)
+    ? "이메일 형식이 아닙니다."
     : "";
-  if (!idRegex.test(id.value)) {
-    error(id);
+  if (!emailRegex.test(email.value)) {
+    error(email);
     return;
   }
 
@@ -86,7 +91,7 @@ function signup() {
 
   if (!isSuccess) return;
 
-  sessionStorage.setItem("id", id.value);
+  sessionStorage.setItem("email", email.value);
   sessionStorage.setItem("pw", pw.value);
 
   location.href = "../html/signup2.html";

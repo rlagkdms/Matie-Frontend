@@ -4,11 +4,11 @@ const error2 = document.getElementsByClassName("input_error")[1];
 var isSuccess = false;
 
 function signup2() {
-  const email = document.getElementById("email");
+  const id = document.getElementById("id");
   const name = document.getElementById("name");
 
-  if (!email.value) {
-    error(email);
+  if (!id.value) {
+    error(id);
     return;
   }
 
@@ -17,26 +17,21 @@ function signup2() {
     return;
   }
 
-  email.style.borderColor = "#2291F8";
+  id.style.borderColor = "#2291F8";
   name.style.borderColor = "#2291F8";
 
   axios
-    .get(`http://localhost:8080/users/duplicate1/${email.value}`)
+    .get(`http://localhost:8080/users/duplicate2/${id.value}`)
     .then(() => (isSuccess = true))
-    .catch(
-      () =>
-        (error1.innerHTML =
-          "Email already exists, use another email address or login")
-    );
+    .catch(() => (error1.innerHTML = "ID already exists, use another ID"));
 
-  const emailRegex =
-    /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+  const idRegex = /^[a-zA-Z][0-9a-zA-Z]{6,12}$/;
 
-  error1.innerHTML = !emailRegex.test(email.value)
-    ? "이메일 형식이 아닙니다."
+  error1.innerHTML = !idRegex.test(id.value)
+    ? "6~12자 이내로 영문과 숫자만 가능합니다."
     : "";
-  if (!emailRegex.test(email.value)) {
-    error(email);
+  if (!idRegex.test(id.value)) {
+    error(id);
     return;
   }
 
@@ -54,8 +49,8 @@ function signup2() {
 
   const req = {
     name: name.value,
-    userId: sessionStorage.getItem("id"),
-    email: email.value,
+    userId: id.value,
+    email: sessionStorage.getItem("email"),
     pw: sessionStorage.getItem("pw"),
   };
 
@@ -63,7 +58,7 @@ function signup2() {
     .post(`http://localhost:8080/users`, req)
     .then(() => {
       location.href = "../html/login.html";
-      sessionStorage.removeItem("id");
+      sessionStorage.removeItem("email");
       sessionStorage.removeItem("pw");
     })
     .catch((error) => {
