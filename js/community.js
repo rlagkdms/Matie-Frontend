@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  question();
+  if (document.getElementById("select1").checked) question();
+  else debate();
 });
 
 async function question() {
