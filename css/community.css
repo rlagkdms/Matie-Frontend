@@ -100,6 +100,11 @@ span {
   font-weight: bold;
   margin-top: 2vmin;
   margin-bottom: 2.5vmin;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .content {
@@ -115,12 +120,39 @@ span {
   -webkit-line-clamp: 2;
 }
 
-.component-bottom {
+.component-bottom-question {
   margin-top: 6vmin;
   margin-left: 67vmin;
   margin-right: 1vmin;
   word-spacing: 8vmin;
   padding-bottom: 3vmin;
+}
+
+.component-bottom-debate {
+  display: inline-flex;
+  margin-top: 8vmin;
+  padding-bottom: 4vmin;
+}
+
+.button-like {
+  margin-left: 13.5vmin;
+}
+
+.button-unlike {
+  margin-left: 29vmin;
+}
+
+.like {
+  display: flex;
+}
+
+.unlike {
+  display: flex;
+}
+
+label {
+  font-size: 4.7vmin;
+  margin-left: 2vmin;
 }
 
 button {
