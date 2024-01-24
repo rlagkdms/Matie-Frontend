@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/community.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-title">
+        <span class="title">Community</span>
+    </div>
+
+    <div class="select">
+        <input type="radio" id="select1" name="community" value="Q&A" checked onclick="question()"><label
+            for="select1">Q&A</label>
+        <input type="radio" id="select2" name="community" value="Debate"><label for="select2"
+            onclick="debate()">Debate</label>
+    </div>
+
+    <div class="container-community"></div>
+
+    <button class="plus">+</button>
+
+    <menu>
+        <div class="context" onclick="location.href='../html/home.html'">
+            <img src="../img/home_off.svg" alt="">
+        </div>
+        <div class="context" onclick="location.href='../html/challenge.html'">
+            <img src="../img/challenges_off.svg" alt="">
+        </div>
+        <div class="context" onclick="location.href='../html/community.html'">
+            <img src="../img/community_off.svg" alt="">
+        </div>
+        <div class="context" onclick="location.href='../html/profile.html'">
+            <img src="../img/profile_off.svg" alt="">
+        </div>
+    </menu>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../js/community.js"></script>
+
+</html>
