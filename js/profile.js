@@ -17,3 +17,8 @@ window.onload = () => {
     point.innerHTML = result.data.balance;
   });
 };
+
+function logout() {
+  Cookies.remove("user_id");
+  location.href = "./login.html";
+}
