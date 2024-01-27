@@ -13,7 +13,7 @@ function login() {
   };
 
   axios
-    .post(`${SERVER_URL}/login`, req)
+    .post(`http://localhost:8080/login`, req)
     .then((res) => {
       console.log(res);
       Cookies.set("user_id", res.data.id, { expires: 1 });

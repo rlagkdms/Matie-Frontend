@@ -22,13 +22,13 @@
         <div class="input_box">
             <div class="input_div">
                 <span>New password</span>
-                <input type="password" class="input" placeholder="Password" onfocus="placeholder=''"
+                <input type="password" class="input" id="password" placeholder="Password" onfocus="placeholder=''"
                     onblur="placeholder='Password'">
             </div>
             <div class="input_div">
                 <span>Confirm</span>
                 <div class="input_custom input">
-                    <input type="password" placeholder="Password Confirm" onfocus="placeholder=''"
+                    <input type="password" id="password-confirm" placeholder="Password Confirm" onfocus="placeholder=''"
                         onblur="placeholder='Password Confirm'">
                     <span class="eye_close">
                         <img src="../img/close_eye.svg" alt="">
@@ -38,11 +38,12 @@
         </div>
 
         <div class="btn_box">
-            <div class="btn default_btn" onclick="location.href = '../html/login.html'">Comfirm</div>
+            <div class="btn default_btn" onclick="changePassword()">Comfirm</div>
             <div class="btn cancel_btn" onclick="location.href = '../html/first.html'">cancel</div>
         </div>
     </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="../js/findPw2.js"></script>
 
 </html>

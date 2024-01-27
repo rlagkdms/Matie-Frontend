@@ -2,10 +2,10 @@ const sendBtn = document.getElementById("send");
 const codeInput = document.getElementsByClassName("input_div")[1];
 const emailInput = document.getElementById("input_email");
 
-emailInput.oninput = ()=>{ 
-  if(emailInput.value === '')sendBtn.disabled = true; 
-  else  sendBtn.disabled = false;  
-} //비활성화
+emailInput.oninput = () => {
+  if (emailInput.value === "") sendBtn.disabled = true;
+  else sendBtn.disabled = false;
+}; //비활성화
 
 sendBtn.onclick = () => {
   emailInput.disabled = true;
@@ -28,36 +28,35 @@ timer.onclick = () => {
   resetCount();
   sendEmail();
 };
-let min; 
-let sec; 
+let min;
+let sec;
 let TIME;
 
 function resetCount() {
-  min = 2; 
-  sec = 60; 
+  min = 2;
+  sec = 60;
   TIME = setInterval((e) => {
-  timer.innerText = `${min}:00`;
+    timer.innerText = `${min}:00`;
     setTimer();
   }, 1000);
 }
 
-function setTimer(){
-  const numMin  = Number(min);
+function setTimer() {
+  const numMin = Number(min);
   const numSec = Number(sec);
-  if(numMin === 0 && numSec === 0){
+  if (numMin === 0 && numSec === 0) {
     timer.innerText = "resend";
     clearInterval(TIME);
-  }
-  else{
-    if(numSec === 0){
-      const newMin = numMin -1; 
+  } else {
+    if (numSec === 0) {
+      const newMin = numMin - 1;
       const newSec = 59;
-  
-      min = newMin.toString(); 
-      sec = newSec.toString(); 
-    }else{
-      const newSec = numSec -1; 
-      sec = (newSec < 10)?`0${newSec.toString()}`: newSec.toString();
+
+      min = newMin.toString();
+      sec = newSec.toString();
+    } else {
+      const newSec = numSec - 1;
+      sec = newSec < 10 ? `0${newSec.toString()}` : newSec.toString();
     }
     timer.innerText = `${min}:${sec}`;
   }
@@ -80,6 +79,7 @@ function changePassword() {
   axios
     .get(`http://localhost:8080/email/${inputEmail}/${inputCode}`)
     .then((result) => {
+      sessionStorage.setItem("email", inputEmail);
       location.href = "../html/findPw2.html";
     })
     .catch((err) => {});

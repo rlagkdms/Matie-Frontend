@@ -1,0 +1,94 @@
+#wrap {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  position: relative;
+  height: 82.73vh;
+  background-color: var(--background-color);
+  overflow-y: scroll;
+  padding-left: 5px;
+  padding-top: 20px;
+  top: 14.27vh;
+}
+
+.container-select {
+  width: 100%;
+  position: fixed;
+  top: 20vmin;
+  z-index: 10;
+  background-color: white;
+  padding-top: 4vmin;
+  margin-top: -1vmin;
+}
+
+.select {
+  text-align: center;
+  word-spacing: 10vmin;
+}
+
+.select input[type="radio"] {
+  display: none;
+}
+
+.select input[type="radio"] + label {
+  display: inline-block;
+  width: 15vmin;
+  height: 9vmin;
+  font-weight: bold;
+  font-size: 4.3vmin;
+}
+
+.select input[type="radio"]:checked + label {
+  border-bottom: 3px solid #001178;
+}
+
+.container-all {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.container-product {
+  width: 90%;
+  height: 58vmin;
+  margin-left: 3vmin;
+  box-shadow: 0px 2px 11px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4vmin;
+  margin-top: 4vmin;
+}
+
+img {
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 4vmin;
+  border-top-right-radius: 4vmin;
+}
+
+.text {
+  line-height: 5.5vmin;
+  padding-left: 3vmin;
+  padding-right: 3vmin;
+}
+
+.company {
+  color: #9e9e9e;
+  font-size: 2.5vmin;
+  margin-top: 2vmin;
+}
+
+.title {
+  font-size: 4vmin;
+  color: #616161;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.point {
+  color: #2c2c2c;
+  font-size: 4vmin;
+  font-weight: bold;
+}
