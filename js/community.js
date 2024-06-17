@@ -93,3 +93,9 @@ function detailQna(value) {
 function detailDebate(value) {
   location.href = `../html/community-debate.html?id=${value}`;
 }
+
+function writePost() {
+  if (document.getElementById("select1").checked)
+    location.href = "../html/community-qna-create.html";
+  else location.href = "../html/community-debate-create.html";
+}
