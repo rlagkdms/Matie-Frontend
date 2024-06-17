@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matie</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/community.css">
-</head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/community.css" />
+  </head>
 
-<body>
+  <body>
     <div id="wrap">
-        <div class="tabbar">
-            <span>Community</span>
+      <div class="tabbar">
+        <span>Community</span>
+      </div>
+      <div class="container-select">
+        <div class="select">
+          <input
+            type="radio"
+            id="select1"
+            name="community"
+            value="Q&A"
+            checked
+            onclick="question()"
+          /><label for="select1">Q&A</label>
+          <input
+            type="radio"
+            id="select2"
+            name="community"
+            value="Debate"
+          /><label for="select2" onclick="debate()">Debate</label>
         </div>
-        <div class="container-select">
-            <div class="select">
-                <input type="radio" id="select1" name="community" value="Q&A" checked onclick="question()"><label
-                    for="select1">Q&A</label>
-                <input type="radio" id="select2" name="community" value="Debate"><label for="select2"
-                    onclick="debate()">Debate</label>
-            </div>
+      </div>
+      <main>
+        <div class="container-community"></div>
+
+        <button class="plus" onclick="writePost()">+</button>
+      </main>
+      <menu>
+        <div class="context" onclick="location.href='../html/home.html'">
+          <img src="../img/home_off.svg" alt="" />
         </div>
-        <main>
-            <div class="container-community"></div>
-
-            <button class="plus">+</button>
-
-        </main>
-        <menu>
-            <div class="context" onclick="location.href='../html/home.html'">
-                <img src="../img/home_off.svg" alt="">
-            </div>
-            <div class="context" onclick="location.href='../html/challenge.html'">
-                <img src="../img/challenges_off.svg" alt="">
-            </div>
-            <div class="context" onclick="location.href='../html/community.html'">
-                <img src="../img/community_off.svg" alt="">
-            </div>
-            <div class="context" onclick="location.href='../html/profile.html'">
-                <img src="../img/profile_off.svg" alt="">
-            </div>
-        </menu>
+        <div class="context" onclick="location.href='../html/challenge.html'">
+          <img src="../img/challenges_off.svg" alt="" />
+        </div>
+        <div class="context" onclick="location.href='../html/community.html'">
+          <img src="../img/community_off.svg" alt="" />
+        </div>
+        <div class="context" onclick="location.href='../html/profile.html'">
+          <img src="../img/profile_off.svg" alt="" />
+        </div>
+      </menu>
     </div>
+  </body>
 
-</body>
-
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="../js/community.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../js/community.js"></script>
 </html>
