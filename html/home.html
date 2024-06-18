@@ -1,178 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matie</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/home.css">
-</head>
-
-<body>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <!--1 공기오염 2 일회용품 3 재활용 4 봉사-->
+  <body>
     <div id="wrap">
-        <div class="tabbar">
-            <span><img src="../img/esgmatelogo.svg" alt=""></span>
-            <img src="../img/iconamoon_notification-bold.svg" alt="">
+      <div class="tabbar">
+        <span><img src="../img/esgmatelogo.svg" alt="" /></span>
+        <img src="../img/iconamoon_notification-bold.svg" alt="" />
+      </div>
+      <main>
+        <section class="steps">
+          <div class="steps_count_title">
+            <img src="../img/logo.png" />
+            <span>Today's step</span>
+            <h1>0000</h1>
+          </div>
+        </section>
+        <section class="process">
+          <div class="article_container">
+            <h3>Today’s article</h3>
+            <div class="article_box">
+              <div class="article_slider">
+                <div class="article">
+                  <div>Recycling Is Broken. Should I Even Bother?</div>
+                  <span>by New York Times</span>
+                </div>
+                <div class="article">
+                  <div>Recycling Is Broken. Should I Even Bother?</div>
+                  <span>by New York Times</span>
+                </div>
+                <div class="article">
+                  <div>Recycling Is Broken. Should I Even Bother?</div>
+                  <span>by New York Times</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="characters">
+            <h3>Your Maties</h3>
+            <div class="char_sliders">
+              <ul>
+                <li>
+                  <div
+                    class="character_div"
+                    onclick="location.href='./charcDetail.html'"
+                  >
+                    <img src="../img/SingleUse (일회용품).svg" />
+                    <div>Single-use product</div>
+                    <span>Cuppie</span>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="character_div"
+                    onclick="location.href='./charcDetail.html'"
+                  >
+                    <img src="../img/AirPollution (공기 오염).svg" />
+                    <div>Air pollution</div>
+                    <span>Tyar</span>
+                  </div>
+                </li>
+
+                <li>
+                  <div
+                    class="character_div"
+                    onclick="location.href='./charcDetail.html'"
+                  >
+                    <img src="../img/Recycle (재활용).svg" />
+                    <div>Recycle</div>
+                    <span>Bottly</span>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    class="character_div"
+                    onclick="location.href='./charcDetail.html'"
+                  >
+                    <img src="../img/Volunteer (봉사).svg" />
+                    <div>Volunteer</div>
+                    <span>Proneer</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+      </main>
+      <menu>
+        <div class="context" onclick="location.href='../html/home.html'">
+          <img src="../img/home_on.svg" alt="" />
         </div>
-        <main>
-            <section class="steps">
-                <div class="steps_count_title">
-                    <span>Today's step</span>
-                    <h1>0000</h1>
-                </div>
-            </section>
-            <section class="process">
-                <h3>Weekly process</h3>
-                <div class="menu_bar">
-                    <input type="radio" name="process_radio" id="btn1" onclick="showStatics(0)" checked>
-                    <label for="btn1" class="menu_btn btn1">Stop count</label>
-
-                    <input type="radio" name="process_radio" id="btn2" onclick="showStatics(1)">
-                    <label for="btn2" class="menu_btn btn2">Challenges</label>
-
-                    <input type="radio" name="process_radio" id="btn3" onclick="showStatics(2)">
-                    <label for="btn3" class="menu_btn btn3">Type proportion</label>
-                </div>
-                <div class="statics">
-                    <div class="statics-picture">
-                        <div class="static"><img src="../img/Group 111.svg" alt=""></div>
-                        <div class="static"></div>
-                        <div class="static"></div>
-
-                    </div>
-                </div>
-            </section>
-            <section class="characters">
-                <h3>Characters</h3>
-                <div class="char_sliders">
-                    <ul>
-                        <li>
-                            <div class="char_content" onclick="location.href='../html/charcDetail.html'">
-                                <img src="../img/SingleUse_crop.png" alt="">
-                                <div class="char_info">
-                                    <span class="char_type_info">Type infomations</span>
-                                    <b class="char-name-title" class="char-name-title">Character name</b>
-                                    <div class="char-name">
-                                        <span>Challenges you’ve done <br>with</span>
-                                        <b>Character name</b>
-                                    </div>
-                                    <div class="count_box">
-                                        <div class="week count">
-                                            <b>4</b>
-                                            <span>This week</span>
-                                        </div>
-                                        <div class="total count">
-                                            <b>12</b>
-                                            <span>In total</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="char_content" onclick="location.href='../html/charcDetail.html'">
-                                <img src="../img/AirPollution_crop.png" alt="">
-                                <div class="char_info">
-                                    <span class="char_type_info">Type infomations</span>
-                                    <b class="char-name-title">Character name</b>
-                                    <div class="char-name">
-                                        <span>Challenges you’ve done <br>with</span>
-                                        <b>Character name</b>
-                                    </div>
-                                    <div class="count_box">
-                                        <div class="week count">
-                                            <b>4</b>
-                                            <span>This week</span>
-                                        </div>
-                                        <div class="total count">
-                                            <b>12</b>
-                                            <span>In total</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="char_content" onclick="location.href='../html/charcDetail.html'">
-                                <img src="../img/Recycle_crop.png" alt="">
-                                <div class="char_info">
-                                    <span class="char_type_info">Type infomations</span>
-                                    <b class="char-name-title">Character name</b>
-                                    <div class="char-name">
-                                        <span>Challenges you’ve done <br>with</span>
-                                        <b>Character name</b>
-                                    </div>
-                                    <div class="count_box">
-                                        <div class="week count">
-                                            <b>4</b>
-                                            <span>This week</span>
-                                        </div>
-                                        <div class="total count">
-                                            <b>12</b>
-                                            <span>In total</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="char_content" onclick="location.href='../html/charcDetail.html'">
-                                <img src="../img/Volunteer_crop.png" alt="">
-                                <div class="char_info">
-                                    <span class="char_type_info">Type infomations</span>
-                                    <b class="char-name-title">Character name</b>
-                                    <div class="char-name">
-                                        <span>Challenges you’ve done <br>with</span>
-                                        <b>Character name</b>
-                                    </div>
-                                    <div class="count_box">
-                                        <div class="week count">
-                                            <b>4</b>
-                                            <span>This week</span>
-                                        </div>
-                                        <div class="total count">
-                                            <b>12</b>
-                                            <span>In total</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="events">
-                <h3>Event Shortcuts</h3>
-                <div class="event_box">
-                    <li>
-                        <div class="event">
-                            <span>Group challenge - January Event</span>
-                            <h3>Let’s go to the re-use shop!</h3>
-                            <span>Special · January</span>
-                            <span>500 points</span>
-                        </div>
-                    </li>
-                </div>
-            </section>
-        </main>
-        <menu>
-            <div class="context" onclick="location.href='../html/home.html'">
-                <img src="../img/home_off.svg" alt="">
-            </div>
-            <div class="context" onclick="location.href='../html/challenge.html'">
-                <img src="../img/challenges_off.svg" alt="">
-            </div>
-            <div class="context" onclick="location.href='../html/community.html'">
-                <img src="../img/community_off.svg" alt="">
-            </div>
-            <div class="context" onclick="location.href='../html/profile.html'">
-                <img src="../img/profile_off.svg" alt="">
-            </div>
-        </menu>
+        <div class="context" onclick="location.href='../html/challenge.html'">
+          <img src="../img/challenges_off.svg" alt="" />
+        </div>
+        <div class="context" onclick="location.href='../html/community.html'">
+          <img src="../img/community_off.svg" alt="" />
+        </div>
+        <div class="context" onclick="location.href='../html/profile.html'">
+          <img src="../img/profile_off.svg" alt="" />
+        </div>
+      </menu>
     </div>
-
-</body>
-<script src="../js/home.js"></script>
-
+  </body>
+  <script src="../js/home.js"></script>
+  <script src="../js/menu.js"></script>
 </html>
