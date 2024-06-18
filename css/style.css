@@ -89,6 +89,7 @@ h3 {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  border: none;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
   color: white;
 }

@@ -1,33 +1,11 @@
+import SERVER_HOST from "../js/config";
+
 let selectedDiv = document.getElementsByClassName("selected")[0];
 let selectedValue = document.getElementsByClassName("selected-value")[0];
 document.getElementsByTagName("main")[0];
 const challengeDiv = document.getElementsByClassName("chellenge_box")[0];
 //챌린지 클릭 시
-
-let challengeList = [
-  {
-    id: 1,
-    title: "만보기 100번 걷기",
-    description: "설명입니다.",
-    point: 100,
-    type: 1,
-  },
-  {
-    id: 2,
-    title: "만보기 100번 걷기",
-    description: "설명입니다.",
-    point: 100,
-    type: 1,
-  },
-  {
-    id: 3,
-    title: "만보기 100번 걷기",
-    description: "설명입니다.",
-    point: 100,
-    type: 1,
-  },
-];
-
+console.log(SERVER_HOST);
 //클릭했을 떄 다른 화면으로 넘기기
 const clickChallenge = (index) => {
   challengeDiv.map((item, i) => {
@@ -66,33 +44,52 @@ function showSlide(index) {
 }
 
 const showChallenges = () => {
-  const container = document.querySelector(".challenge_box"); // challenge_box를 선택합니다.
+  const container = document.querySelector(".challenge_box");
   const progress = document.getElementById("progress");
   container.innerHTML = ""; // 초기화
+  let challenges = [];
 
-  challengeList.forEach((item, index) => {
-    const challengeDiv = document.createElement("div");
-    challengeDiv.className = "chellenge_div";
-    challengeDiv.setAttribute("onclick", `clickChallenge(${index})`);
-    value = (5 / 5) * 100;
-    challengeDiv.innerHTML += `
-      <div class="challenge_img"></div>
-      <div class="title_box">
-        <h4>${item.title}</h4>
-        <div class="exp_box">
-          <span>${index}/${1}</span> <!-- 이 부분은 실제 데이터로 대체 필요 -->
-          <span>${item.point}exp</span>
-        </div>
-        <progress id="progress" value="${value}" min="0" max="100"></progress>
-      </div>
-    `;
+  axios
+    .get(`${SERVER_HOST}/challenge/type/${1}`)
+    .then((response) => {
+      if (response.status === 200) {
+        console.log("챌린지 목록 불러오기 성공");
+        console.log(response.data);
+        challenges = response.data;
 
-    if (value === 100) {
-      progress.className = "clearChallenge";
-    }
+        challenges.forEach((item, index) => {
+          const challengeDiv = document.createElement("div");
+          challengeDiv.className = "chellenge_div";
+          challengeDiv.setAttribute("onclick", `clickChallenge(${index})`);
 
-    container.appendChild(challengeDiv);
-  });
+          let totalCount = 5;
+          let value = (5 / totalCount) * 100;
+
+          challengeDiv.innerHTML += `
+            <div class="challenge_img"></div>
+            <div class="title_box">
+              <h4>${item.title}</h4>
+              <div class="exp_box">
+                <span>${index}/${totalCount}</span> <!-- 이 부분은 실제 데이터로 대체 필요 -->
+                <span>${item.point}exp</span>
+              </div>
+              <progress id="progress" value="${value}" min="0" max="100"></progress>
+            </div>
+          `;
+
+          if (value === 100) {
+            progress.className = "clearChallenge";
+          }
+
+          container.appendChild(challengeDiv);
+        });
+      } else {
+        console.log("챌린지 목록 불러오기 실패", response.status);
+      }
+    })
+    .catch((error) => {
+      console.error("서버 연결 실패", error);
+    });
 };
 showChallenges();
 function nextSlide() {
