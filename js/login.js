@@ -11,12 +11,15 @@ function login() {
     userId: id,
     pw: pw,
   };
-
+  console.log(req);
   axios
-    .post(`http://localhost:8080/login`, req)
+    .post(
+      `http://ec2-3-35-19-10.ap-northeast-2.compute.amazonaws.com:8080/user/login`,
+      req
+    )
     .then((res) => {
       console.log(res);
-      Cookies.set("user_id", res.data.id, { expires: 1 });
+      localStorage.setItem("user_id", res.data.id);
       location.href = "../html/home.html";
     })
     .catch((error) => {

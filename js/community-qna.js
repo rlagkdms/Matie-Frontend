@@ -1,3 +1,6 @@
+const SERVER_HOST =
+  "http://ec2-3-35-19-10.ap-northeast-2.compute.amazonaws.com:8080";
+
 const searchParams = new URLSearchParams(location.search);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -7,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let content = document.getElementById("content");
 
   axios
-    .get(`http://localhost:8080/community/${searchParams.get("id")}`)
+    .get(`${SERVER_HOST}/community/${searchParams.get("id")}`)
     .then((result) => {
       name.innerHTML = result.data.creatorUser.name;
       date.innerHTML = result.data.createdDate;
@@ -15,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       content.innerHTML = result.data.description;
 
       axios
-        .get(`http://localhost:8080/comment/${result.data.id}`)
+        .get(`${SERVER_HOST}/comment/${result.data.id}`)
         .then((result) => {
           for (var data of result.data) {
             const temp = document.createElement("div");
@@ -27,9 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         <br>
                         <span class="date">${data.user.createdDate}</span>
                     </p>
-                    <button class="heart">
-                        <img src="../img/ph_heart-fill-no.svg">
-                    </button>
                 </div>
                 <div class="component-content">${data.description}</div>
             </div>`;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function send() {
   let comment = document.getElementById("comment").value;
-  let userId = Cookies.get("user_id");
+  let userId = localStorage.getItem("user_id");
 
   const req = {
     description: comment,
@@ -56,7 +56,7 @@ function send() {
   };
 
   axios
-    .post(`http://localhost:8080/comment`, req)
+    .post(`${SERVER_HOST}/comment`, req)
     .then((result) => {
       const temp = document.createElement("div");
       temp.innerHTML = `<div class="comment">
@@ -67,9 +67,6 @@ function send() {
                           <br>
                           <span class="date">${data.createdDate}</span>
                       </p>
-                      <button class="heart">
-                          <img src="../img/ph_heart-fill-no.svg">
-                      </button>
                   </div>
                   <div class="component-content">${data.description}</div>
               </div>`;

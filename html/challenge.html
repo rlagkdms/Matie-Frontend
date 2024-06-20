@@ -1,199 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matie</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- axios -->
-
-
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/challenge.css">
-    <link rel="stylesheet" href="../css/group-challenge.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/challenge.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
     <div id="wrap">
-        <div class="tabbar">
-          <div class="select">
-                <div class="selected">
-                        <div class="selected-value">Daily challenges</div>
-                </div>
+      <div class="tabbar">
+        <div class="select">
+          <div class="selected">
+            <div class="selected-value">Daily challenges</div>
           </div>
         </div>
-        <main>
+      </div>
+      <main>
+        <div class="challenge_box" style="display: flex"></div>
 
-            <div class="challenge_box"  style="display: flex;">
-                <script>
-                 
-                </script>
+        <div class="charac_box">
+          <div class="slider-container">
+            <div class="slider-wrapper">
+              <div class="slide">
+                <div class="content">
+                  <img src="../img/AirPollution (공기 오염).svg" alt="" />
+                  <span>Air Pollution</span>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="content">
+                  <img src="../img/Recycle (재활용).svg" alt="" />
+                  <span>Recycle</span>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="content">
+                  <img src="../img/SingleUse (일회용품).svg" alt="" />
+                  <span>Single Use</span>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="content">
+                  <img src="../img/Volunteer (봉사).svg" alt="" />
+                  <span>Volunteer</span>
+                </div>
+              </div>
             </div>
-<!-- 
-            <div class="challenge_box">
-                <div class="chellenge_div" onclick="clickChallenge(1)">
-                    <div class="challenge_img"></div>
-                    <div class="title_box">
-                        <h4>Take a walk</h4>
-                        <div class="exp_box">
-                            <span>3473/10000</span>
-                            <span>300exp</span>
-                        </div>
-                        <progress id="progress" value="50" min="0" max="100"></progress>
-                    </div>
-                </div>
-                <div class="chellenge_div" onclick="clickChallenge(2)">
-                    <div class="challenge_img"></div>
-                    <div class="title_box">
-                        <h4>Take a walk</h4>
-                        <div class="exp_box">
-                            <span>3472/10000</span>
-                            <span>300exp</span>
-                        </div>
-                        <progress id="progress" value="50" min="0" max="100"></progress>
-                    </div>
-                </div>
-                <div class="chellenge_div" onclick="">
-                    <div class="challenge_img"></div>
-                    <div class="title_box">
-                        <h4>Take a public transport</h4>
-                        <div class="exp_box">
-                            <span>3472/10000</span>
-                            <span>300exp</span>
-                        </div>
-                        <progress id="progress" value="50" min="0" max="100"></progress>
-                    </div>
-                </div>
-            </div>
+          </div>
 
-            <div class="challenge_box">
-                <div class="chellenge_div" onclick="">
-                    <div class="challenge_img"></div>
-                    <div class="title_box">
-                        <h4>Take a walk</h4>
-                        <div class="exp_box">
-                            <span>3471/10000</span>
-                            <span>300exp</span>
-                        </div>
-                        <progress id="progress" value="50" min="0" max="100"></progress>
-                    </div>
-                </div>
-                <div class="chellenge_div" onclick="">
-                    <div class="challenge_img"></div>
-                    <div class="title_box">
-                        <h4>Take a walk</h4>
-                        <div class="exp_box">
-                            <span>3472/10000</span>
-                            <span>300exp</span>
-                        </div>
-                        <progress id="progress" value="50" min="0" max="100"></progress>
-                    </div>
-                </div>
-                <div class="chellenge_div" onclick="">
-                    <div class="challenge_img"></div>
-                    <div class="title_box">
-                        <h4>Take a public transport</h4>
-                        <div class="exp_box">
-                            <span>3472/10000</span>
-                            <span>300exp</span>
-                        </div>
-                        <progress id="progress" value="50" min="0" max="100"></progress>
-                    </div>
-                </div>
-            </div>
+          <div class="controls">
+            <button class="control-btn" onclick="prevSlide()">
+              <img src="../img/left_double_arrow.svg" />
+            </button>
+            <button class="control-btn" onclick="nextSlide()">
+              <img src="../img/right_double_arrow.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </main>
 
-            <div class="challenge_box">
-                <div class="chellenge_div" onclick="">
-                    <div class="challenge_img"></div>
-                    <div class="title_box">
-                        <h4>Take a walk</h4>
-                        <div class="exp_box">
-                            <span>3470/10000</span>
-                            <span>300exp</span>
-                        </div>
-                        <progress id="progress" value="50" min="0" max="100"></progress>
-                    </div>
-                </div>
-                <div class="chellenge_div" onclick="">
-                    <div class="challenge_img"></div>
-                    <div class="title_box">
-                        <h4>Take a public transport</h4>
-                        <div class="exp_box">
-                            <span>3472/10000</span>
-                            <span>300exp</span>
-                        </div>
-                        <progress id="progress" value="50" min="0" max="100"></progress>
-                    </div>
-                </div>
-                <div class="chellenge_div" onclick="">
-                    <div class="challenge_img"></div>
-                    <div class="title_box">
-                        <h4>Take a walk</h4>
-                        <div class="exp_box">
-                            <span>3472/10000</span>
-                            <span>300exp</span>
-                        </div>
-                        <progress id="progress" value="50" min="0" max="100"></progress>
-                    </div>
-                </div>
-            </div> -->
-
-
-            <div class="charac_box">
-                <div class="slider-container">
-                    <div class="slider-wrapper">
-                        <div class="slide"> <div class="content">
-                            <img src="../img/AirPollution (공기 오염).svg" alt="">
-                            <span>Air Pollution</span>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="content">
-                            <img src="../img/Recycle (재활용).svg" alt="">
-                            <span>Recycle</span>
-                        </div>
-                    </div>
-                      <div class="slide">
-                        <div class="content">
-                            <img src="../img/SingleUse (일회용품).svg" alt="">
-                            <span>Single Use</span>
-                        </div>
-                      </div>
-                      <div class="slide">
-                        <div class="content">
-                            <img src="../img/Volunteer (봉사).svg" alt="">
-                            <span>Volunteer</span>
-                        </div>
-                      </div>
-                    </div>
-                  
-                    <div class="controls">
-                        <button class="control-btn" onclick="prevSlide()"><img src="../img/left_double_arrow.svg" ></button>
-                        <button class="control-btn" onclick="nextSlide()"><img src="../img/right_double_arrow.svg" alt=""></button>
-                  </div>
-            </div>
-
-        </main>
-       
-        <menu>
-            <div class="context" onclick="location.href='../html/home.html'">
-                <img src="../img/home_off.svg" alt="">
-            </div>
-            <div class="context" onclick="location.href='../html/challenge.html'">
-                <img src="../img/challenges_on.svg" alt="">
-            </div>
-            <div class="context" onclick="location.href='../html/community.html'">
-                <img src="../img/community_off.svg" alt="">
-            </div>
-            <div class="context" onclick="location.href='../html/profile.html'">
-                <img src="../img/profile_off.svg" alt="">
-            </div>
-        </menu> 
+      <menu>
+        <div class="context" onclick="location.href='../html/home.html'">
+          <img src="../img/home_off.svg" alt="" />
+        </div>
+        <div class="context" onclick="location.href='../html/challenge.html'">
+          <img src="../img/challenges_on.svg" alt="" />
+        </div>
+        <div class="context" onclick="location.href='../html/community.html'">
+          <img src="../img/community_off.svg" alt="" />
+        </div>
+        <div class="context" onclick="location.href='../html/profile.html'">
+          <img src="../img/profile_off.svg" alt="" />
+        </div>
+      </menu>
     </div>
     <script type="module" src="../js/config.js"></script>
-</body>
-<!-- <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
-<script src="../js/challenge.js"></script>
-<script src="../js/menu.js"></script>
+  </body>
 
+  <script src="../js/challenge.js"></script>
+  <script src="../js/menu.js"></script>
 </html>

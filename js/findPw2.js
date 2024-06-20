@@ -29,8 +29,13 @@ function changePassword() {
 
   let req = { pw: password };
 
-  axios.put(`http://localhost:8080/users/${email}`, req).then(() => {
-    sessionStorage.removeItem("email");
-    location.href = "../html/login.html";
-  });
+  axios
+    .put(
+      `http://ec2-3-35-19-10.ap-northeast-2.compute.amazonaws.com:8080/users/${email}`,
+      req
+    )
+    .then(() => {
+      sessionStorage.removeItem("email");
+      location.href = "../html/login.html";
+    });
 }

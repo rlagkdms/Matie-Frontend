@@ -51,9 +51,12 @@ function signup() {
   email.style.borderColor = "#2291F8";
   pw.style.borderColor = "#2291F8";
   pwCheck.style.borderColor = "#2291F8";
+  s;
 
   axios
-    .get(`http://localhost:8080/users/duplicate1/${email.value}`)
+    .get(
+      `http://ec2-3-35-19-10.ap-northeast-2.compute.amazonaws.com:8080/users/duplicate1/${email.value}`
+    )
     .then(() => (isSuccess = true))
     .catch(
       () =>

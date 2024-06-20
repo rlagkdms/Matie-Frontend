@@ -4,20 +4,24 @@
 }
 
 main {
+  display: block;
   position: relative;
-  height: 82.73vh;
+  /* height: 82.73vh; */
+  height: calc(100% - 7.27vh);
   background-color: var(--background-color);
   overflow-y: scroll;
   padding-left: 5px;
   padding-top: 20px;
   top: 7.27vh;
+  box-sizing: border-box;
 }
 
 .container-user {
   display: inline-flex;
-  width: 97%;
+  width: 100%;
   background-color: white;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .user-image {

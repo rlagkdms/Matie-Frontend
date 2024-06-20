@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matie</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/signup.css">
-</head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-        <h1>Sign up</h1>
-        <div class="input_box">
-            <div class="input_div">
-                <span>Email</span>
-                <input type="text" class="input" id="email" placeholder="Email" onfocus="placeholder=''"
-                    onblur="placeholder='Email'">
-                <div class="input_error"></div>
-            </div>
-            <div class="input_div">
-                <span>Password</span>
-                <input type="password" class="input" id="pw" placeholder="Password" onfocus="placeholder=''"
-                    onblur="placeholder='Password'">
-                <div class="input_error"></div>
-            </div>
-            <div class="input_div">
-                <span>Confirm</span>
-                <div class="input_custom input">
-                    <input type="password" id="pw-check" placeholder="Password Confirm" onfocus="placeholder=''"
-                        onblur="placeholder='Password Confirm'">
-                    <span class="eye_close">
-                        <img src="../img/close_eye.svg" alt="">
-                    </span>
-                </div>
-                <div class="input_error"></div>
-            </div>
+      <h1>Sign up</h1>
+      <div class="input_box">
+        <div class="input_div">
+          <span>Email</span>
+          <input
+            type="text"
+            class="input"
+            id="email"
+            placeholder="Email"
+            onfocus="placeholder=''"
+            onblur="placeholder='Email'"
+          />
+          <div class="input_error"></div>
         </div>
-        <div class="btn_box">
-            <div class="btn default_btn" onclick="signup()">Confirm</div>
-            <div class="btn cancel_btn" onclick="cancel()">Cancel</div>
+        <div class="input_div">
+          <span>Password</span>
+          <input
+            type="password"
+            class="input"
+            id="pw"
+            placeholder="Password"
+            onfocus="placeholder=''"
+            onblur="placeholder='Password'"
+          />
+          <div class="input_error"></div>
         </div>
+        <div class="input_div">
+          <span>Confirm</span>
+          <div class="input_custom input">
+            <input
+              type="password"
+              id="pw-check"
+              placeholder="Password Confirm"
+              onfocus="placeholder=''"
+              onblur="placeholder='Password Confirm'"
+            />
+            <span class="eye_close">
+              <img src="../img/close_eye.svg" alt="" />
+            </span>
+          </div>
+          <div class="input_error"></div>
+        </div>
+      </div>
+      <div class="btn_box">
+        <div class="btn default_btn" onclick="signup()">Confirm</div>
+        <div class="btn cancel_btn" onclick="cancel()">Cancel</div>
+      </div>
     </main>
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="../js/common.js"></script>
-<script src="../js/signup.js"></script>
-
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/signup.js"></script>
 </html>

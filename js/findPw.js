@@ -69,7 +69,10 @@ function sendEmail() {
     emailAddress: inputEmail,
   };
 
-  axios.post(`http://localhost:8080/email`, req);
+  axios.post(
+    `http://ec2-3-35-19-10.ap-northeast-2.compute.amazonaws.com:8080/email`,
+    req
+  );
 }
 
 function changePassword() {
@@ -77,7 +80,9 @@ function changePassword() {
   var inputCode = document.getElementById("input_code").value;
 
   axios
-    .get(`http://localhost:8080/email/${inputEmail}/${inputCode}`)
+    .get(
+      `http://ec2-3-35-19-10.ap-northeast-2.compute.amazonaws.com:8080/email/${inputEmail}/${inputCode}`
+    )
     .then((result) => {
       sessionStorage.setItem("email", inputEmail);
       location.href = "../html/findPw2.html";

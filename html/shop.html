@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matie</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/shop.css">
-</head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/shop.css" />
+  </head>
 
-<body>
+  <body>
     <div id="wrap">
-        <div class="tabbar">
-            <span onclick="location.href='./profile.html'">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                        d="M16.0604 2.45401C16.3417 2.7353 16.4996 3.11676 16.4996 3.51451C16.4996 3.91226 16.3417 4.29372 16.0604 4.57501L8.63545 12L16.0604 19.425C16.3337 19.7079 16.4849 20.0868 16.4815 20.4801C16.478 20.8734 16.3203 21.2496 16.0422 21.5277C15.7641 21.8059 15.3878 21.9636 14.9946 21.967C14.6013 21.9704 14.2224 21.8192 13.9395 21.546L5.45395 13.0605C5.17274 12.7792 5.01477 12.3978 5.01477 12C5.01477 11.6023 5.17274 11.2208 5.45395 10.9395L13.9395 2.45401C14.2207 2.1728 14.6022 2.01483 15 2.01483C15.3977 2.01483 15.7792 2.1728 16.0604 2.45401Z"
-                        fill="black" />
-                </svg>
-            </span>
-            <span>Shop</span>
+      <div class="tabbar">
+        <span onclick="location.href='./profile.html'">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M16.0604 2.45401C16.3417 2.7353 16.4996 3.11676 16.4996 3.51451C16.4996 3.91226 16.3417 4.29372 16.0604 4.57501L8.63545 12L16.0604 19.425C16.3337 19.7079 16.4849 20.0868 16.4815 20.4801C16.478 20.8734 16.3203 21.2496 16.0422 21.5277C15.7641 21.8059 15.3878 21.9636 14.9946 21.967C14.6013 21.9704 14.2224 21.8192 13.9395 21.546L5.45395 13.0605C5.17274 12.7792 5.01477 12.3978 5.01477 12C5.01477 11.6023 5.17274 11.2208 5.45395 10.9395L13.9395 2.45401C14.2207 2.1728 14.6022 2.01483 15 2.01483C15.3977 2.01483 15.7792 2.1728 16.0604 2.45401Z"
+              fill="black"
+            />
+          </svg>
+        </span>
+        <span>Shop</span>
+      </div>
+      <div class="container-select">
+        <div class="select">
+          <input
+            type="radio"
+            id="select1"
+            name="category"
+            value="0"
+            checked
+          /><label for="select1">All</label>
+          <input type="radio" id="select2" name="category" value="1" /><label
+            for="select2"
+            >Clothes</label
+          >
+          <input type="radio" id="select3" name="category" value="2" /><label
+            for="select3"
+            >Food</label
+          >
+          <input type="radio" id="select4" name="category" value="3" /><label
+            for="select4"
+            >Grocery</label
+          >
         </div>
-        <div class="container-select">
-            <div class="select">
-                <input type="radio" id="select1" name="category" value="0" checked><label for="select1">All</label>
-                <input type="radio" id="select2" name="category" value="1"><label for="select2">Clothes</label>
-                <input type="radio" id="select3" name="category" value="2"><label for="select2">Grocery</label>
-                <input type="radio" id="select4" name="category" value="3"><label for="select2">Food</label>
-            </div>
-        </div>
-        <main>
-            <div class="container-all">
-
-            </div>
-        </main>
+      </div>
+      <main>
+        <div class="container-all"></div>
+      </main>
     </div>
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="../js/shop.js"></script>
-
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../js/shop.js"></script>
 </html>

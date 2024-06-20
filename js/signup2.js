@@ -21,7 +21,9 @@ function signup2() {
   name.style.borderColor = "#2291F8";
 
   axios
-    .get(`http://localhost:8080/users/duplicate2/${id.value}`)
+    .get(
+      `http://ec2-3-35-19-10.ap-northeast-2.compute.amazonaws.com:8080/users/duplicate2/${id.value}`
+    )
     .then(() => (isSuccess = true))
     .catch(() => (error1.innerHTML = "ID already exists, use another ID"));
 
@@ -55,7 +57,10 @@ function signup2() {
   };
 
   axios
-    .post(`http://localhost:8080/users`, req)
+    .post(
+      `http://ec2-3-35-19-10.ap-northeast-2.compute.amazonaws.com:8080/users`,
+      req
+    )
     .then(() => {
       location.href = "../html/login.html";
       sessionStorage.removeItem("email");
