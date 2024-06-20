@@ -1,3 +1,6 @@
+const SERVER_HOST =
+  "http://ec2-3-35-19-10.ap-northeast-2.compute.amazonaws.com:8080";
+
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("select1").checked) question();
   else debate();
@@ -7,7 +10,7 @@ async function question() {
   document.querySelector(".container-community").replaceChildren();
 
   axios
-    .get(`http://localhost:8080/community/type/Q&A`)
+    .get(`${SERVER_HOST}/community/type/Q&A`)
     .then((result) => {
       for (var data of result.data) {
         const temp = document.createElement("div");
@@ -32,9 +35,7 @@ async function question() {
                 <button type="button">
                     <img src="../img/material-symbols_comment.svg" alt="">
                 </button>
-                <button type="button">
-                    <img src="../img/ph_heart-fill.svg" alt="">
-                </button>
+             
             </div>
         </div>`;
         document.querySelector(".container-community").append(temp);
@@ -47,7 +48,7 @@ async function debate() {
   document.querySelector(".container-community").replaceChildren();
 
   axios
-    .get(`http://localhost:8080/community/type/Debate`)
+    .get(`${SERVER_HOST}/community/type/Debate`)
     .then((result) => {
       for (var data of result.data) {
         const temp = document.createElement("div");

@@ -42,10 +42,10 @@ menu {
   position: absolute;
   /* background-color: aqua; */
 }
-.chellenge_div {
+.challenge_div {
   box-sizing: border-box;
   width: 91.1vw;
-  height: 10vh;
+  height: 10.5vh;
   border-radius: 8px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
   display: flex;
@@ -59,10 +59,11 @@ menu {
   border-radius: 8px 0 0 8px;
 }
 .title_box {
+  position: relative;
   box-sizing: border-box;
-  width: 73.3vw;
+  width: 75.3vw;
   height: 100%;
-  padding: 1.5vh 16px 1.5vh 8px;
+  padding: 1vh 5px 1vh 5px;
 }
 .title_box > h4 {
   font-size: var(--body-font-size);
@@ -78,6 +79,8 @@ menu {
   box-sizing: border-box;
   appearance: none;
   margin-top: 5px;
+  position: absolute;
+  bottom: 3px;
 }
 #progress::-webkit-progress-bar {
   background-color: #eeeeee;
@@ -181,7 +184,6 @@ input[id="slide"] {
   height: 100%;
   overflow: hidden;
 }
-
 .slider-wrapper {
   position: relative;
   width: 100%;
@@ -189,7 +191,6 @@ input[id="slide"] {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-
 .slide {
   position: relative;
   min-width: 100%;
@@ -209,9 +210,11 @@ input[id="slide"] {
   align-items: center;
   row-gap: 24px;
 }
+
 .slide img {
   width: 53.3vw;
   height: 24vh;
+  z-index: 100;
 }
 .content span {
   font-size: 20px;

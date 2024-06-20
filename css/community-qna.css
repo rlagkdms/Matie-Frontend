@@ -8,13 +8,18 @@ main {
   height: 82.73vh;
   background-color: var(--background-color);
   overflow-y: scroll;
-  padding-left: 5px;
   padding-top: 20px;
   top: 7.27vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
 }
-
+.component-comment {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 11.25vh;
+}
 .container-info {
-  position: fixed;
   width: 100%;
   background-color: white;
 }
@@ -54,6 +59,7 @@ main {
 }
 
 .component-detail {
+  box-sizing: border-box;
   width: 100%;
   background-color: white;
   padding: 2vmin;
@@ -71,12 +77,13 @@ main {
   margin-right: 9vmin;
   text-overflow: ellipsis;
   overflow: hidden;
-  display: -webkit-box;
+  /* display: -webkit-box; */
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
 
 .content {
+  box-sizing: border-box;
   font-size: 4vmin;
   line-height: 6vmin;
   color: #616161;
@@ -94,12 +101,11 @@ button {
 }
 
 .container-comment {
-  position: relative;
+  box-sizing: border-box;
   overflow-y: scroll;
-  padding-left: 5px;
   padding-top: 3vmin;
-  top: 32vh;
   background-color: white;
+  overflow-x: hidden;
 }
 
 .component-title {
@@ -116,7 +122,8 @@ button {
 }
 
 .component-content {
-  margin-left: 5vmin;
+  box-sizing: border-box;
+  padding-left: 5vmin;
   color: #2c2c2c;
   font-size: 3.5vmin;
 }

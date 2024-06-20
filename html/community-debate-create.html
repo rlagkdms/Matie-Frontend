@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matie</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/writepost.css" />
   </head>
   <body>
     <div id="wrap">
       <div class="tabbar">
-        <span onclick="location.href='./profile.html'">
+        <span onclick="location.href='./community.html'">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -24,17 +24,27 @@
             />
           </svg>
         </span>
-        <span>Cart</span>
+        <span>Start debate</span>
+        <button onclick="sendPostDebate();">Send</button>
       </div>
       <main>
-        <div class="item">
-          <div class="item_img"></div>
-          <div>
-            <span>Company</span>
-            <div>ContentContentContentContentContent</div>
-          </div>
-        </div>
+        <input
+          type="text"
+          placeholder="Title"
+          onfocus="this.placeholder = ''"
+          onblur="this.placeholder = 'Title'"
+        />
+        <textarea
+          name=""
+          id=""
+          placeholder="Write a context..."
+          onfocus="this.placeholder = ''"
+          onblur="this.placeholder = 'Write a context...'"
+        ></textarea>
       </main>
     </div>
   </body>
+  <script src="../js/community-debate-create.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </html>
