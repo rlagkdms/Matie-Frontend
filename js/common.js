@@ -6,7 +6,7 @@ var SERVER_URL =
 function cancel() {
   localStorage.removeItem("id");
   localStorage.removeItem("pw");
-  location.href = "../html/index.html";
+  location.href = "../html/first.html";
 }
 
 function error(obj) {
