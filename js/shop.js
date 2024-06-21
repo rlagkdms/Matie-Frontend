@@ -114,3 +114,39 @@ function categoryProducts(category_id) {
       console.error("Error fetching category products:", error);
     });
 }
+
+function shopSearch() {
+  const overlay = document.createElement("div");
+  const searchDiv = document.createElement("div");
+  const searchContainer = document.createElement("div");
+  const searchInput = document.createElement("input");
+  const searchIcon = document.createElement("img");
+  const backIcon = document.createElement("img");
+
+  overlay.className = "overlay";
+  searchDiv.className = "search-div";
+  searchContainer.className = "search-container";
+  searchIcon.className = "search-icon";
+  backIcon.className = "back-icon";
+
+  searchInput.className = "search-input";
+  searchInput.autocomplete = "off";
+  searchInput.placeholder = "What do you want?";
+
+  searchIcon.src = "../img/search-input.svg";
+  backIcon.src = "../img/back.svg";
+
+  backIcon.addEventListener("click", function () {
+    overlay.style.display = "none";
+    searchDiv.style.display = "none";
+  });
+
+  searchContainer.appendChild(searchInput);
+  searchContainer.appendChild(searchIcon);
+
+  searchDiv.appendChild(backIcon);
+  searchDiv.appendChild(searchContainer);
+
+  document.body.appendChild(overlay);
+  document.body.appendChild(searchDiv);
+}
